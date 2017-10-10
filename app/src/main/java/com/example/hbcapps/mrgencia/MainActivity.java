@@ -80,5 +80,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private boolean checkPermission(String permission){
+        int result = this.checkCallingOrSelfPermission(permission);
+        return result == PackageManager.PERMISSION_GRANTED;
     }
 }
